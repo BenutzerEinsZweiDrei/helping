@@ -7,88 +7,114 @@
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
-      background: #f4f4f4;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+    header {
+      background: linear-gradient(135deg, #4f46e5, #3b82f6);
+      color: white;
+      padding: 2rem 1rem;
       text-align: center;
-      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     h1 {
-      margin-bottom: 20px;
+      margin: 0;
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+    main {
+      max-width: 1100px;
+      margin: 2.5rem auto;
+      padding: 0 1rem;
     }
     .tiles {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
     }
     .tile {
       background: white;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 10px;
-      width: 100px;
-      height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 14px;
-      cursor: pointer;
-      transition: transform 0.2s;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.15rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
     .tile:hover {
-      transform: scale(1.05);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .tile a {
+      color: #4f46e5;
+      text-decoration: none;
+      display: block;
     }
     .skills {
-      margin-top: 30px;
-      text-align: left;
-      display: inline-block;
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+    .skills h2 {
+      margin-top: 0;
+      margin-bottom: 1.2rem;
+      color: #4f46e5;
+      font-size: 1.6rem;
     }
     .skills ul {
       list-style: none;
       padding: 0;
       margin: 0;
+      display: grid;
+      gap: 0.8rem;
     }
-    .skills li {
-      margin: 5px 0;
-    }
-    .skills a {
+    .skills li a {
       text-decoration: none;
-      color: #007BFF;
+      color: #2563eb;
+      padding: 0.6rem 0.9rem;
+      display: block;
+      border-radius: 8px;
+      transition: background 0.2s ease, color 0.2s ease;
+      font-weight: 500;
     }
-    .skills a:hover {
-      text-decoration: underline;
+    .skills li a:hover {
+      background: #eff6ff;
+      color: #1e3a8a;
     }
   </style>
 </head>
 <body>
-  <h1>Skills Auswahl</h1>
-  <div class="tiles">
-    <a href="https://www.meinkompass.org/de/psychische-erkrankungen/"><div class="tile">Psychoedukation auf meinkompass</div></a>
-    <a href="https://xhalr.com/"><div class="tile">Atmen auf xhalr</div></a>
-    <a href="https://www.virtualsupporttalks.de/de"><div class="tile">Unterstützung auf VSP</div></a>
-    
-  </div>
-
-  <div class="skills">
-    <h2>Skills</h2>
-    <ul>
-       <li><a href="https://youtu.be/MR72jSUIQHk?si=lzIXPT-HpicDFPIC">Erden/Runterkommen</a></li>
-      <li><a href="https://youtu.be/GK8nveXesvA?si=w2KZ4kyilbKnw3UI">Quadrat Atmung</a></li>
-      <li><a href="https://youtube.com/shorts/qhHkvZO8ZRU?feature=share">Self-Soothing</a></li>
-      <li><a href="https://youtu.be/aIC-Io441v4">Body Scan</a></li>
-      <li><a href="https://telegra.ph/Loving-PME-08-10">Loving PME</a></li>
-<li><a href="https://youtu.be/x7QJVLrGZOo?si=M5ZiZa8EzvYm_9Ca">Emotionale Klaviermusik</a></li>
-<li><a href="https://youtu.be/6QmltJacAKE">This too Shall Pass Song</a></li>
-<li><a href="https://telegra.ph/3-steps-Selbstmitgef%C3%BChl-08-10">Selbstmitgefühl</a></li>
-<li><a href="https://telegra.ph/Hooponopono-08-10">Hooponopono</a></li>
-  <li><a href="https://streamable.com/hqrj6h" target="_blank">Vagusnerv Entspannung</a></li>
-  <li><a href="https://streamable.com/vaugxd" target="_blank">Autogenes Training</a></li>
-  <li><a href="https://streamable.com/tbcz8q" target="_blank">Erden Bioenergetik</a></li>
-  <li><a href="https://youtu.be/0AMQRNBMeG0" target="_blank">Innerer Kraftort</a></li>
-
-
-    </ul>
-  </div>
+  <header>
+    <h1>Skills Auswahl</h1>
+  </header>
+  <main>
+    <section class="tiles">
+      <div class="tile"><a href="https://www.meinkompass.org/de/psychische-erkrankungen/">Psychoedukation<br>auf meinkompass</a></div>
+      <div class="tile"><a href="https://xhalr.com/">Atmen<br>auf xhalr</a></div>
+      <div class="tile"><a href="https://www.virtualsupporttalks.de/de">Unterstützung<br>auf VSP</a></div>
+    </section>
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><a href="https://youtu.be/MR72jSUIQHk?si=lzIXPT-HpicDFPIC">Erden/Runterkommen</a></li>
+        <li><a href="https://youtu.be/GK8nveXesvA?si=w2KZ4kyilbKnw3UI">Quadrat Atmung</a></li>
+        <li><a href="https://youtube.com/shorts/qhHkvZO8ZRU?feature=share">Self-Soothing</a></li>
+        <li><a href="https://youtu.be/aIC-Io441v4">Body Scan</a></li>
+        <li><a href="https://telegra.ph/Loving-PME-08-10">Loving PME</a></li>
+        <li><a href="https://youtu.be/x7QJVLrGZOo?si=M5ZiZa8EzvYm_9Ca">Emotionale Klaviermusik</a></li>
+        <li><a href="https://youtu.be/6QmltJacAKE">This too Shall Pass Song</a></li>
+        <li><a href="https://telegra.ph/3-steps-Selbstmitgef%C3%BChl-08-10">Selbstmitgefühl</a></li>
+        <li><a href="https://telegra.ph/Hooponopono-08-10">Hooponopono</a></li>
+        <li><a href="https://streamable.com/hqrj6h" target="_blank">Vagusnerv Entspannung</a></li>
+        <li><a href="https://streamable.com/vaugxd" target="_blank">Autogenes Training</a></li>
+        <li><a href="https://streamable.com/tbcz8q" target="_blank">Erden Bioenergetik</a></li>
+        <li><a href="https://youtu.be/0AMQRNBMeG0" target="_blank">Innerer Kraftort</a></li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
